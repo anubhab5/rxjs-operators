@@ -1,7 +1,9 @@
-<h2>RxJS Practice</h2>
-<!-- <span *ngFor="let d of data$ | async">
-  {{ d | json }}
-</span> -->
-<!-- <input type="button" value="click" (click)="clickMe()" /> -->
-<!-- {{ data$ | async | json }} -->
-<!-- <app-component-2 *ngIf="showButton"></app-component-2> -->
+<section class="container-fluid">
+  <h2>RxJS Practice</h2>
+  <ul class="nav">
+    <li class="nav-item" *ngFor="let operator of operatorList">
+      <a class="nav-link p-0 pe-4" aria-current="page">{{ operator }}</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+</section>

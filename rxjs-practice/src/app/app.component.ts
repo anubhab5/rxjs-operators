@@ -9,44 +9,39 @@ import { User } from './services/User';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  /**
+   *
+   */
   title = 'rxjs-practice';
 
-  data$!: Observable<User[]>;
+  operatorList: String[] = [];
 
-  showButton = true;
-
-  constructor(private userSvc: UserService) {}
-
+  /**
+   *
+   */
+  constructor() {}
+  /**
+   * Lifecycle Hook to initialize the component variables.
+   */
   ngOnInit() {
-    // this.data$ = this.userSvc.getData();
-    // this.ofOperator();
-    // this.intervalOpDemo();
+    this.initializeOperatorTypeList();
   }
 
   /**
-   *
+   * Method to assign the operator list
    */
-  ofOperator() {
-    // Create an observable that emits three values: 1, 2, and 3
-    const observable = of(1, 2, 3);
-
-    debugger;
-    // Subscribe to the observable
-    observable.subscribe({
-      next: (value) => console.log(value),
-      complete: () => console.log('Observable completed'),
-    });
-  }
-
-  /**
-   *
-   */
-  fromOperator(): void {}
-
-  /**
-   *
-   */
-  clickMe() {
-    this.showButton = !this.showButton;
+  initializeOperatorTypeList(): void {
+    this.operatorList = [
+      'Creation',
+      'Join Creation',
+      'Transformation',
+      'Filtering',
+      'Join',
+      'Multicasting',
+      'Error Handling',
+      'Utility',
+      'Conditional and Boolean',
+      'Mathematical and Aggregate',
+    ];
   }
 }
