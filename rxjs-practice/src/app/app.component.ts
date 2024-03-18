@@ -13,13 +13,19 @@ export class AppComponent {
 
   data$!: Observable<User[]>;
 
+  showButton = true;
+
   constructor(private userSvc: UserService) {}
 
   ngOnInit() {
     // this.data$ = this.userSvc.getData();
-    this.ofOperator();
+    // this.ofOperator();
+    // this.intervalOpDemo();
   }
 
+  /**
+   *
+   */
   ofOperator() {
     // Create an observable that emits three values: 1, 2, and 3
     const observable = of(1, 2, 3);
@@ -30,5 +36,17 @@ export class AppComponent {
       next: (value) => console.log(value),
       complete: () => console.log('Observable completed'),
     });
+  }
+
+  /**
+   *
+   */
+  fromOperator(): void {}
+
+  /**
+   *
+   */
+  clickMe() {
+    this.showButton = !this.showButton;
   }
 }

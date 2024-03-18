@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, first, last, map, of } from 'rxjs';
+import { Observable, first, interval, last, map, of, take } from 'rxjs';
 import { User } from './User';
 
 @Injectable({
@@ -29,5 +29,9 @@ export class UserService {
           return data;
         })
       );
+  }
+
+  intervalOp(timer: number) {
+    return interval(timer);
   }
 }
