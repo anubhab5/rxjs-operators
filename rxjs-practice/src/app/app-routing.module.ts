@@ -3,11 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '/creationOp',
+    path: 'creation-operator',
     loadChildren: () =>
       import('./creation-operators/creation-op.module').then(
         (m) => m.CreationOpModule
       ),
+  },
+  {
+    path: '',
+    redirectTo: 'creation-operator',
+    pathMatch: 'full',
   },
 ];
 
