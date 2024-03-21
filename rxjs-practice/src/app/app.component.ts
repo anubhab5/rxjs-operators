@@ -14,7 +14,7 @@ export class AppComponent {
    */
   title = 'rxjs-practice';
 
-  operatorList: String[] = [];
+  operatorList: any[] = [];
 
   /**
    *
@@ -32,16 +32,25 @@ export class AppComponent {
    */
   initializeOperatorTypeList(): void {
     this.operatorList = [
-      'Creation',
-      'Join Creation',
-      'Transformation',
-      'Filtering',
-      'Join',
-      'Multicasting',
-      'Error Handling',
-      'Utility',
-      'Conditional and Boolean',
-      'Mathematical and Aggregate',
+      {
+        routeName: 'Creation',
+        routePath: 'creation-operator',
+      },
+      {
+        routeName: 'Join Creation',
+        routePath: 'join-creation-operator',
+      },
     ];
   }
 }
+
+// 'Creation',
+// 'Join Creation',
+// 'Transformation',
+// 'Filtering',
+// 'Join',
+// 'Multicasting',
+// 'Error Handling',
+// 'Utility',
+// 'Conditional and Boolean',
+// 'Mathematical and Aggregate',

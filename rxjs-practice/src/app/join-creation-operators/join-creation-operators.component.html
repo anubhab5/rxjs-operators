@@ -1,1 +1,14 @@
-<p>join-creation-operators works!</p>
+<section class="container-fluid">
+  <h5 style="color: brown">Join Creation Operator</h5>
+  <ul class="nav">
+    <li class="nav-item" *ngFor="let operator of creationOperatorList">
+      <a
+        [routerLink]="[operator.routePath]"
+        class="nav-link p-0 pe-4"
+        aria-current="page"
+        >{{ operator.routeName }}</a
+      >
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+</section>

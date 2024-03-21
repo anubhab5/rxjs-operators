@@ -1,2 +1,15 @@
-<p>creation-operators works!</p>
-<router-outlet></router-outlet>
+<section class="container-fluid">
+  <h5 style="color: brown">Creation Operator</h5>
+  <ul class="nav">
+    <li class="nav-item" *ngFor="let operator of creationOperatorList">
+      <a
+        [routerLink]="[operator.routePath]"
+        routerLinkActive="active"
+        class="nav-link p-0 pe-4"
+        aria-current="page"
+        >{{ operator.routeName }}</a
+      >
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+</section>

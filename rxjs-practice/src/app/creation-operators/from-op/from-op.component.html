@@ -1,1 +1,45 @@
-<p>from-op works!</p>
+<hr />
+<div class="container-fluid mt-4">
+  <h5>Defn</h5>
+  <code>
+    Creates an Observable from an Array, an array-like object, a Promise, an
+    iterable object, or an Observable-like object.
+  </code>
+</div>
+<hr />
+
+<div class="container-fluid mt-4">
+  <h4 style="font-style: italic">How It Works</h4>
+  <hr />
+  <h6>Creates Observables from Array</h6>
+  <code>
+    <p>return from([1, 2, 3]);</p>
+    <p>Output: when subscribed will get 1, 2 , 3</p>
+  </code>
+  <hr />
+  <h6>Creates Observables from Promise</h6>
+  <code>
+    <!-- #docregion -->
+    const promise = new Promise((resolve, reject) => return from(promise);
+    <!-- #enddocregion -->
+  </code>
+  <hr />
+  <h6>Creates Observables from Iterables</h6>
+  <code>
+    function* generateItems() {{ "{" }} yield 'Item 1'; yield 'Item 2';
+    {{ "}" }}
+    <br />
+    return from(generateItems());
+  </code>
+  <hr />
+  <h6>Creates Observables from Observables</h6>
+  <code>
+    // Emit a value every second, for 5 seconds
+    <br />
+    const sourceObservable = interval(1000).pipe(take(5));<br />
+    // Convert the Observable to another Observable using from return
+    <br />
+    from(sourceObservable);
+  </code>
+  <hr />
+</div>

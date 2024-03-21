@@ -2,7 +2,12 @@
   <h2>RxJS Practice</h2>
   <ul class="nav">
     <li class="nav-item" *ngFor="let operator of operatorList">
-      <a class="nav-link p-0 pe-4" aria-current="page">{{ operator }}</a>
+      <a
+        [routerLink]="[operator.routePath]"
+        class="nav-link p-0 pe-4"
+        aria-current="page"
+        >{{ operator.routeName }}</a
+      >
     </li>
   </ul>
   <router-outlet></router-outlet>

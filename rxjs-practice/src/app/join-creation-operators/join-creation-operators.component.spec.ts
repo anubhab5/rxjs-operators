@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JoinCreationOperatorsComponent } from './join-creation-operators.component';
+import { CreationOperatorsComponent } from './join-creation-operators.component';
 
-describe('JoinCreationOperatorsComponent', () => {
-  let component: JoinCreationOperatorsComponent;
-  let fixture: ComponentFixture<JoinCreationOperatorsComponent>;
+describe('CreationOperatorsComponent', () => {
+  let component: CreationOperatorsComponent;
+  let fixture: ComponentFixture<CreationOperatorsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [JoinCreationOperatorsComponent]
+      declarations: [CreationOperatorsComponent],
     });
-    fixture = TestBed.createComponent(JoinCreationOperatorsComponent);
+    fixture = TestBed.createComponent(CreationOperatorsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

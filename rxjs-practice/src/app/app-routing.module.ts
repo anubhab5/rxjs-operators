@@ -10,6 +10,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'join-creation-operator',
+    loadChildren: () =>
+      import(
+        './join-creation-operators/join-creation-operators-routing.module'
+      ).then((m) => m.JoinCreationOpRoutingModule),
+  },
+  {
     path: '',
     redirectTo: 'creation-operator',
     pathMatch: 'full',

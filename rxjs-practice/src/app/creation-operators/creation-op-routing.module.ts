@@ -10,16 +10,16 @@ const routes: Routes = [
     component: CreationOperatorsComponent,
     children: [
       {
-        path: 'of-op',
+        path: 'of-operator',
         component: OfOpComponent,
       },
       {
-        path: 'from-op',
+        path: 'from-operator',
         component: FromOpComponent,
       },
       {
         path: '',
-        redirectTo: 'of-op',
+        redirectTo: 'of-operator',
         pathMatch: 'full',
       },
     ],
