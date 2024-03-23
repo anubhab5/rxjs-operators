@@ -27,11 +27,11 @@ export class JoinCreationOperatorsComponent implements OnInit {
     this.creationOperatorList = [
       {
         routeName: 'combineLatest',
-        routePath: 'creation-operator',
+        routePath: 'combineLatest',
       },
       {
         routeName: 'concat',
-        routePath: 'bindCallback-operator',
+        routePath: 'concat',
       },
       {
         routeName: 'forkJoin',

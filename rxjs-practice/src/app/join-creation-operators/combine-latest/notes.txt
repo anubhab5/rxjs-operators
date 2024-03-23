@@ -1,0 +1,21 @@
+`combineLatest` is an operator in RxJS that merges the values emitted by multiple observables into a single observable.
+ 
+ It subscribes to each observable in order and collects an array of the most recent values from each observable.
+ 
+ The resulting observable emits an array of values, where the order corresponds to the order of the passed observables.
+ 
+ The static version of `combineLatest` accepts an array of observables, making it useful when the number of observables to combine 
+ is not known in advance. An empty array will result in an observable that completes immediately.
+ 
+ To ensure that the output array always has the same length, `combineLatest` waits for all input observables to emit at least once 
+ before emitting results. If some observables emit values before others start emitting, those initial values may be lost. 
+ 
+ If an observable completes without emitting any values, the resulting observable will complete without emitting anything. 
+ 
+ If any observable errors, `combineLatest` will error immediately and unsubscribe from all other observables.
+ 
+ The resulting observable from `combineLatest` completes when all combined streams complete. 
+ 
+ Even if one observable completes, the resulting observable will still emit values when others emit. 
+ 
+ If an observable completes, its value will always be the last emitted value.'

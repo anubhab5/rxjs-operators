@@ -5,6 +5,23 @@
     Creates an Observable from an Array, an array-like object, a Promise, an
     iterable object, or an Observable-like object.
   </code>
+  <br /><br />
+  <p style="font-size: large; font-weight: 500">Theory</p>
+
+  <ul>
+    <li>
+      from converts various other objects and data types into Observables.
+    </li>
+    <li>
+      It also converts a Promise, an array-like, or an iterable object into an
+      Observable that emits the items in that promise, array, or iterable.
+    </li>
+    <li>A String, in this context, is treated as an array of characters.</li>
+    <li>
+      Observable-like objects (contains a function named with the ES2015 Symbol
+      for Observable) can also be converted through this operator.
+    </li>
+  </ul>
 </div>
 <hr />
 

@@ -4,6 +4,7 @@
     <li class="nav-item" *ngFor="let operator of creationOperatorList">
       <a
         [routerLink]="[operator.routePath]"
+        routerLinkActive="active"
         class="nav-link p-0 pe-4"
         aria-current="page"
         >{{ operator.routeName }}</a

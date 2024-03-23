@@ -1,0 +1,26 @@
+<hr />
+<div class="container-fluid mt-4">
+  <h5>Defn</h5>
+  <code>
+    The fromEvent operator in RxJS is used to create an observable that emits
+    events of a specified type from a given event target, such as DOM elements,
+    Node.js EventEmitter, or any other event emitter.
+  </code>
+</div>
+<hr />
+
+<pre>
+  import {{ "{" }} fromEvent {{ "}" }} from 'rxjs'; 
+  // Get a reference to a DOM element 
+  const button = document.getElementById('myButton'); 
+  // Create an observable for 'click' events on the button 
+  const clickObservable = fromEvent(button, 'click'); 
+  // Subscribe to the observable
+  clickObservable.subscribe(event => {{ "{" }} 
+    console.log('Button clicked!',  event); 
+  {{ "}" }});
+</pre>
+<hr />
+<!-- app.component.html -->
+<button class="btn btn-primary rounded-0" #myButton>Click me</button> <br />
+<em>On click of the the above button, event is raised.</em>

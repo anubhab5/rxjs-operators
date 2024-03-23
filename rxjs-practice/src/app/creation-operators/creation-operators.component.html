@@ -3,6 +3,7 @@
   <ul class="nav">
     <li class="nav-item" *ngFor="let operator of creationOperatorList">
       <a
+        [ngClass]="{ isCompleted: operator.isCompleted }"
         [routerLink]="[operator.routePath]"
         routerLinkActive="active"
         class="nav-link p-0 pe-4"

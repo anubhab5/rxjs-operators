@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { OfOpComponent } from './of-op/of-op.component';
 import { FromOpComponent } from './from-op/from-op.component';
 import { CreationOperatorsComponent } from './creation-operators.component';
+import { FromEventComponent } from './from-event/from-event.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'from-operator',
         component: FromOpComponent,
+      },
+      {
+        path: 'fromEvent-operator',
+        component: FromEventComponent,
       },
       {
         path: '',
